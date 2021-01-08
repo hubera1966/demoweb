@@ -1,19 +1,25 @@
 <!DOCTYPE html>
-<html ng-app="demo">
-<head>
-<title>Spring Boot Thymeleaf Hello World Example</title>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" th:href="@{/css/main.css}"
- href="/css/main.css" />
- <script src="/js/angular.min.js"></script>
- <script src="/js/hello.js"></script>
-</head>
-<body>
-<h1>index.html</h1>
-<h2>ist hier</h2>
-<div ng-controller="Hello">
-			<p>The ID is {{greeting.id}}</p>
-			<p>The content is {{greeting.name}}</p>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Axios</title>
+    <script src="/js/axios.min.js"></script>
+    <script>
+      axios
+        .get("http://localhost:8080/list")
+        .then(response => {
+          console.log(response.data);
+      })
+        .catch(error => console.error(error));
+    </script>
+  </head>
+
+  <body>
+		<div>
+			<p>The ID is {{greeting-id}}</p>
+			<p>The content is {{greeting-name}}</p>
 		</div>
-</body>
+  </body>
 </html>

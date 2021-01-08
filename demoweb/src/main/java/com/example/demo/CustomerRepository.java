@@ -12,7 +12,6 @@ public class CustomerRepository {
     @PostConstruct
     public void init(){
         customerList.add(new Customer(1, "albert"));
-        customerList.add(new Customer(2, "maxim"));
     }
     public List<Customer> getData() {
         return customerList;
